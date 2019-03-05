@@ -1,0 +1,76 @@
+# MySQL 筆記 #
+
+
+## 前置 ##
+
+安裝MySQL Community Server 8.0.15 (https://dev.mysql.com/downloads/mysql/)
+和 圖形管理用的MySQL Workbench 8.0.15 (https://dev.mysql.com/downloads/workbench/)
+注意：版本不一樣，可能會不能連接！！
+
+
+下載 教學用的SQL script檔案 （http://books.gotop.com.tw/download/AED002900）
+File->Open SQL Script 找cmdev.sql 和 world.sql 
+然後執行 Query->Execute(All or Selection) 把資料給讀取進去 
+
+於是到左邊工具欄 refresh all 就會出現兩個資料庫
+
+
+
+
+
+
+
+
+## 基礎查詢 ##
+![image](http://www.codedata.com.tw/wp-content/uploads/2013/12/mysql_03_snap_10.png)
+
+查詢world資料庫的 city表格
+```
+USE world
+SELECT * FROM city
+
+或者
+SELECT * FROM world.city
+
+```
+
+
+查詢要看的欄位就好 這邊看ID和 Name
+```
+SELECT ID, Name FROM world.city
+
+```
+
+
+可將查詢結果馬上計算 產生新欄位喔!
+
+```
+例如說要查月薪 乘上12變成年薪
+SELECT ename, salary, salary*12 FROM cmdev.emp
+
+```
+
+...
+```
+
+
+```
+
+...
+```
+
+
+```
+
+...
+```
+
+
+```
+
+...
+```
+
+
+```
+
