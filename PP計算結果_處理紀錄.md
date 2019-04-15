@@ -43,8 +43,10 @@ Electron_affinity,
 TotalDipole
 FROM result_db.ML_temp_7260case_v1
 ```
-
-
+最後export table
+```
+table --> right click --> table data export wizard
+```
 
 
 
