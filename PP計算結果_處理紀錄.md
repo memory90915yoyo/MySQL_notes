@@ -14,12 +14,12 @@ schemas -> your db -> Tables -> right click -> table data import wizard
 canoncial SMILE 設為primary key 檢查是否重複
 ```
 ALTER TABLE result_db.result_7260_case_originaldata
-MODIFY Canonical_Smiles VARCHAR(120)
+MODIFY Original_Smiles VARCHAR(120)
 ```
 
 ```
 ALTER TABLE result_db.result_7260_case_originaldata
-ADD PRIMARY KEY (Canonical_Smiles)
+ADD PRIMARY KEY (Original_Smiles)
 ```
 
 
