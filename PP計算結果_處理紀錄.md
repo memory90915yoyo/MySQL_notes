@@ -31,9 +31,12 @@ CREATE TABLE result_db.ML_temp_7260case_v1
 SELECT Original_Smiles AS Canonical_Smiles, 
 Neutral_TotalDipole AS TotalDipole,
 ( (Cation_ZeroPointEnergy + Cation_ElectronicEnergy) - (Neutral_ZeroPointEnergy + Neutral_ElectronicEnergy) )  AS Ionization_energy, 
-( (Anion_ZeroPointEnergy + Anion_ElectronicEnergy) - (Neutral_ZeroPointEnergy + Neutral_ElectronicEnergy) )  AS Electron_affinity
+( (Neutral_ZeroPointEnergy + Neutral_ElectronicEnergy) - (Anion_ZeroPointEnergy + Anion_ElectronicEnergy) )  AS Electron_affinity
 FROM result_db.result_7260_case_originaldata
 ```
+
+
+
 再算出chemical Hardness 並且只抓需要的資料
 ```
 CREATE TABLE result_db.ML_real_7260case_v1
