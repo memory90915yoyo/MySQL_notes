@@ -52,6 +52,20 @@ your table --> right click --> table data export wizard
 ```
 
 
+# extra operation
+
+重抓7260統計資料
+```
+CREATE TABLE result_db.ML_temp_7260case_v3
+SELECT Original_Smiles AS Canonical_Smiles,
+Neutral_HOMOEnergy AS HOMO,
+Neutral_LUMOEnergy AS LUMO,
+Neutral_TotalDipole AS TotalDipole,
+( (Cation_ZeroPointEnergy + Cation_ElectronicEnergy) - (Neutral_ZeroPointEnergy + Neutral_ElectronicEnergy) )  AS Ionization_energy, 
+( (Neutral_ZeroPointEnergy + Neutral_ElectronicEnergy) - (Anion_ZeroPointEnergy + Anion_ElectronicEnergy) )  AS Electron_affinity
+FROM result_db.result_7260_case_originaldata
+```
+
 
 
 
