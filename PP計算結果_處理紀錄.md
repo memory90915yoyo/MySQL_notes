@@ -66,7 +66,17 @@ Neutral_TotalDipole AS TotalDipole,
 FROM result_db.result_7260_case_originaldata
 ```
 
-
+```
+CREATE TABLE result_db.ML_real_7260case_v3
+SELECT Canonical_Smiles,
+HOMO,LUMO,
+Electron_affinity AS EAv,
+Ionization_energy AS IPv,
+LUMO - HOMO AS Gap,
+(Ionization_energy - Electron_affinity) / 2 AS Hardness,
+TotalDipole
+FROM result_db.ml_temp_7260case_v3
+```
 
 
 
