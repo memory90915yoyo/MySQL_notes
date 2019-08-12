@@ -1,0 +1,25 @@
+# 排名
+
+
+## set @rank的方式一直不成功 所以用以下迂腐方法  ## 
+
+LUMO 由小排到大 
+```
+CREATE TABLE rank_LUMO ( 
+rank_LUMO INT UNSIGNED NOT NULL AUTO_INCREMENT primary key    
+     )    
+SELECT Canonical_Smiles, LUMO, Gap    #下面這三行 都是查詢而已！！
+FROM result_db.prediction_of_xgb_for_pareto
+ORDER BY LUMO
+
+```
+Gap 由小排到大
+```
+CREATE TABLE rank_Gap ( 
+rank_Gap INT UNSIGNED NOT NULL AUTO_INCREMENT primary key    
+     )    
+SELECT Canonical_Smiles, LUMO, Gap    #下面這三行 都是查詢而已！！
+FROM result_db.prediction_of_xgb_for_pareto
+ORDER BY Gap
+```
+
